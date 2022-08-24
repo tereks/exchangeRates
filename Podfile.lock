@@ -1,0 +1,20 @@
+PODS:
+  - Alamofire (5.5.0)
+  - Dip (7.1.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - Dip
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Alamofire
+    - Dip
+
+SPEC CHECKSUMS:
+  Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
+  Dip: 6bebb09d50f88633039ce2c9fe5bc56d387b492f
+
+PODFILE CHECKSUM: 88b034ca00859fd9689bd5b73e521a33807294c3
+
+COCOAPODS: 1.11.3
