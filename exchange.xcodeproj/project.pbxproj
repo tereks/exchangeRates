@@ -36,6 +36,15 @@
 		6B2206B528B5ECCC00E437A9 /* ApplicationDependenciesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2206B428B5ECCC00E437A9 /* ApplicationDependenciesProvider.swift */; };
 		6B2206B828B5ED5B00E437A9 /* SettingsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2206B728B5ED5B00E437A9 /* SettingsProvider.swift */; };
 		6B2206BA28B5F42400E437A9 /* ExchangeGetParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2206B928B5F42400E437A9 /* ExchangeGetParameters.swift */; };
+		6BC1617528B6254700FD6F0C /* CurrenciesChooseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC1617428B6254700FD6F0C /* CurrenciesChooseView.swift */; };
+		6BC1617828B625D500FD6F0C /* CurrencyCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC1617728B625D500FD6F0C /* CurrencyCVCell.swift */; };
+		6BC1617B28B6260600FD6F0C /* CellReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC1617A28B6260600FD6F0C /* CellReusable.swift */; };
+		6BC1617E28B6295B00FD6F0C /* ExchangeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC1617D28B6295B00FD6F0C /* ExchangeModels.swift */; };
+		6BC1618028B633DE00FD6F0C /* TimerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC1617F28B633DE00FD6F0C /* TimerService.swift */; };
+		6BC1618228B633F800FD6F0C /* ObservationToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC1618128B633F800FD6F0C /* ObservationToken.swift */; };
+		6BC1618428B6341D00FD6F0C /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC1618328B6341D00FD6F0C /* Observable.swift */; };
+		6BC1618628B6342D00FD6F0C /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC1618528B6342D00FD6F0C /* Assets.swift */; };
+		6BC1618928B635F400FD6F0C /* NumberFormatter+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC1618828B635F400FD6F0C /* NumberFormatter+Extra.swift */; };
 		C250930393DCC01EB4A308F6 /* Pods_exchange_exchangeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45B137C070B10BA29933EF41 /* Pods_exchange_exchangeUITests.framework */; };
 		C60A7D7EA0AE934AB9F7F345 /* Pods_exchange.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48D498B5C841A28F301A3328 /* Pods_exchange.framework */; };
 		CCC7072EEC0E8D2B8BCAC1CF /* Pods_exchangeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFCA7CA09D3B823B91025F52 /* Pods_exchangeTests.framework */; };
@@ -98,6 +107,15 @@
 		6B2206B428B5ECCC00E437A9 /* ApplicationDependenciesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationDependenciesProvider.swift; sourceTree = "<group>"; };
 		6B2206B728B5ED5B00E437A9 /* SettingsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsProvider.swift; sourceTree = "<group>"; };
 		6B2206B928B5F42400E437A9 /* ExchangeGetParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeGetParameters.swift; sourceTree = "<group>"; };
+		6BC1617428B6254700FD6F0C /* CurrenciesChooseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesChooseView.swift; sourceTree = "<group>"; };
+		6BC1617728B625D500FD6F0C /* CurrencyCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyCVCell.swift; sourceTree = "<group>"; };
+		6BC1617A28B6260600FD6F0C /* CellReusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellReusable.swift; sourceTree = "<group>"; };
+		6BC1617D28B6295B00FD6F0C /* ExchangeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeModels.swift; sourceTree = "<group>"; };
+		6BC1617F28B633DE00FD6F0C /* TimerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerService.swift; sourceTree = "<group>"; };
+		6BC1618128B633F800FD6F0C /* ObservationToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationToken.swift; sourceTree = "<group>"; };
+		6BC1618328B6341D00FD6F0C /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		6BC1618528B6342D00FD6F0C /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		6BC1618828B635F400FD6F0C /* NumberFormatter+Extra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NumberFormatter+Extra.swift"; sourceTree = "<group>"; };
 		8D0F35F292BACA877688C72D /* Pods-exchangeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-exchangeTests.release.xcconfig"; path = "Target Support Files/Pods-exchangeTests/Pods-exchangeTests.release.xcconfig"; sourceTree = "<group>"; };
 		9F2D82F7FB206BEB811B8FC8 /* Pods-exchange-exchangeUITests.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-exchange-exchangeUITests.adhoc.xcconfig"; path = "Target Support Files/Pods-exchange-exchangeUITests/Pods-exchange-exchangeUITests.adhoc.xcconfig"; sourceTree = "<group>"; };
 		A3E2E93F138A03C9F3602FB5 /* Pods-exchangeTests.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-exchangeTests.adhoc.xcconfig"; path = "Target Support Files/Pods-exchangeTests/Pods-exchangeTests.adhoc.xcconfig"; sourceTree = "<group>"; };
@@ -172,6 +190,7 @@
 			children = (
 				6B22064828B5D53000E437A9 /* AppDelegate.swift */,
 				6B2206B428B5ECCC00E437A9 /* ApplicationDependenciesProvider.swift */,
+				6BC1618528B6342D00FD6F0C /* Assets.swift */,
 				6B22068C28B5D9D300E437A9 /* Data Providers */,
 				6B22068428B5D6C300E437A9 /* Common */,
 				6B22067828B5D5B300E437A9 /* UI */,
@@ -215,6 +234,8 @@
 				6B22067A28B5D5D600E437A9 /* ExchangePresenter.swift */,
 				6B22067B28B5D5D600E437A9 /* ExchangeInteractor.swift */,
 				6B22067E28B5D5D600E437A9 /* ExchangeConfigurator.swift */,
+				6BC1617C28B6294F00FD6F0C /* models */,
+				6BC1617628B625C100FD6F0C /* cells */,
 				6B22068928B5D85400E437A9 /* views */,
 			);
 			path = Exchange;
@@ -223,6 +244,8 @@
 		6B22068428B5D6C300E437A9 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				6BC1618728B635EB00FD6F0C /* Extensions */,
+				6BC1617928B625FB00FD6F0C /* Protocols */,
 				6B2206A028B5DCB300E437A9 /* Models */,
 				6B22069B28B5DC4C00E437A9 /* Types */,
 				6B22068828B5D7C100E437A9 /* Services */,
@@ -242,6 +265,7 @@
 		6B22068828B5D7C100E437A9 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				6BC1617F28B633DE00FD6F0C /* TimerService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -249,6 +273,7 @@
 		6B22068928B5D85400E437A9 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				6BC1617428B6254700FD6F0C /* CurrenciesChooseView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -292,6 +317,7 @@
 			children = (
 				6B22069C28B5DC5500E437A9 /* Currency.swift */,
 				6B2206A328B5DD0F00E437A9 /* CurrencyRate.swift */,
+				6BC1618128B633F800FD6F0C /* ObservationToken.swift */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -327,6 +353,39 @@
 				6B2206B728B5ED5B00E437A9 /* SettingsProvider.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		6BC1617628B625C100FD6F0C /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				6BC1617728B625D500FD6F0C /* CurrencyCVCell.swift */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
+		6BC1617928B625FB00FD6F0C /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				6BC1617A28B6260600FD6F0C /* CellReusable.swift */,
+				6BC1618328B6341D00FD6F0C /* Observable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		6BC1617C28B6294F00FD6F0C /* models */ = {
+			isa = PBXGroup;
+			children = (
+				6BC1617D28B6295B00FD6F0C /* ExchangeModels.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		6BC1618728B635EB00FD6F0C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6BC1618828B635F400FD6F0C /* NumberFormatter+Extra.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		F19AFA3D99D73912F95DFC6F /* Pods */ = {
@@ -593,18 +652,27 @@
 				6B22068328B5D5D600E437A9 /* ExchangeConfigurator.swift in Sources */,
 				6B22068F28B5DA1400E437A9 /* AccessTokenAdapter.swift in Sources */,
 				6B2206AE28B5E10F00E437A9 /* NetworkConfiguration.swift in Sources */,
+				6BC1618628B6342D00FD6F0C /* Assets.swift in Sources */,
 				6B2206B528B5ECCC00E437A9 /* ApplicationDependenciesProvider.swift in Sources */,
 				6B22069728B5DBC200E437A9 /* NetworkFactory.swift in Sources */,
 				6B2206A428B5DD0F00E437A9 /* CurrencyRate.swift in Sources */,
 				6B2206B328B5EBE100E437A9 /* RatesDataProvider.swift in Sources */,
+				6BC1618028B633DE00FD6F0C /* TimerService.swift in Sources */,
 				6B22064928B5D53000E437A9 /* AppDelegate.swift in Sources */,
 				6B22067F28B5D5D600E437A9 /* ExchangePresenter.swift in Sources */,
 				6B2206AC28B5DF8800E437A9 /* ExchangeRequest.swift in Sources */,
 				6B2206A828B5DED100E437A9 /* SessionManager.swift in Sources */,
 				6B22069D28B5DC5500E437A9 /* Currency.swift in Sources */,
+				6BC1618228B633F800FD6F0C /* ObservationToken.swift in Sources */,
+				6BC1617528B6254700FD6F0C /* CurrenciesChooseView.swift in Sources */,
+				6BC1618928B635F400FD6F0C /* NumberFormatter+Extra.swift in Sources */,
 				6B22069128B5DA7D00E437A9 /* AuthorizationToken.swift in Sources */,
+				6BC1617828B625D500FD6F0C /* CurrencyCVCell.swift in Sources */,
+				6BC1617E28B6295B00FD6F0C /* ExchangeModels.swift in Sources */,
 				6B22069A28B5DC1000E437A9 /* ExchangeAPI.swift in Sources */,
+				6BC1618428B6341D00FD6F0C /* Observable.swift in Sources */,
 				6B22068228B5D5D600E437A9 /* ExchangeVC.swift in Sources */,
+				6BC1617B28B6260600FD6F0C /* CellReusable.swift in Sources */,
 				6B2206A228B5DCC400E437A9 /* ExchangeRatesData.swift in Sources */,
 				6B22068728B5D6E300E437A9 /* ContentBasedNVC.swift in Sources */,
 			);

@@ -10,20 +10,19 @@ import UIKit
 
 final class ExchangeConfigurator {
 
-    class func create() -> UINavigationController {
+    class func create() -> ExchangeVC {
         let viewController = ExchangeVC()
-        let navigationController = ContentBasedNVC(rootViewController: viewController)
-
         let presenter = ExchangePresenter(view: viewController)
         let interactor = createInteractor(presenter: presenter)
         viewController.interactor = interactor
 
-        return navigationController
+        return viewController
     }
 
     private class func createInteractor(presenter: ExchangePresenter) -> ExchangeInteractor {
         let dependencies = ExchangeInteractor.Dependencies(presenter: presenter,
-                                                           dataProvider: resolve())
+                                                           dataProvider: resolve(),
+                                                           timer: resolve())
         return ExchangeInteractor(dependencies: dependencies)
     }
 }

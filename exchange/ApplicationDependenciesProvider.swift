@@ -39,5 +39,7 @@ final class ApplicationDependenceProvider {
             )
             return RateDataProvider(dependencies: dependencies)
         }
+
+        container.register(.shared) { TimerService() }
     }
 }

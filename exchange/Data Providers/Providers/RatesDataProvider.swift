@@ -51,7 +51,7 @@ final class RateDataProvider {
             }
         }
 
-        group.notify(queue: .main) { [weak self] in
+        group.notify(queue: .main) {
             if let error = lastError {
                 completion?(.failure(error))
             }
