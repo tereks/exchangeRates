@@ -65,6 +65,16 @@ final class ExchangeVC: UIViewController {
         interactor.viewDidLoad()
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        interactor.viewDidAppear()
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        interactor.viewWillDisappear()
+    }
+
     func initialConfigure() {
         view.backgroundColor = .lightGray
 

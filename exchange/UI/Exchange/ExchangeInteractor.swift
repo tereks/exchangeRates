@@ -27,7 +27,13 @@ final class ExchangeInteractor {
     }
     private var currencyRates: [CurrencyRate] = []
 
+    private var timerToken: ObservationToken?
+
     // MARK: - Life cycle
+
+    deinit {
+        timerToken?.cancel()
+    }
 
     init(dependencies: Dependencies) {
         self.dip = dependencies
@@ -39,7 +45,22 @@ final class ExchangeInteractor {
         let dataModel = ExchangeModels.DataModel(sellItems: currencies, buyItems: currencies)
         dip.presenter.showData(with: dataModel)
 
+        configureTimer()
         loadData()
+    }
+
+    func viewDidAppear() {
+        dip.timer.start(updateInterval: 30, lastUpdateDate: Date())
+    }
+
+    func viewWillDisappear() {
+        dip.timer.reset()
+    }
+
+    private func configureTimer() {
+        dip.timer.observeChange { [unowned self] in
+            self.loadData()
+        }
     }
 
     func sellCurrencyChanged(_ code: String) {
@@ -66,6 +87,7 @@ final class ExchangeInteractor {
             case .success(let rates):
                 self.currencyRates = rates
                 self.onCurrentCurrencyPairChanged()
+                self.dip.timer.start(updateInterval: 30, lastUpdateDate: Date())
             case .failure(let error):
                 // disable UI
                 debugPrint(error.localizedDescription)
