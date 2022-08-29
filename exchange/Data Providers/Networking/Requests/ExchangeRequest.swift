@@ -18,7 +18,7 @@ enum ExchangeRequest: URLRequestConvertible {
     var path: String {
         switch self {
         case .rates:
-            return "exchangerates_data/latest"
+            return "/latest"
         }
     }
 

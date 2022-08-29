@@ -22,9 +22,13 @@ enum ExchangeModels {
 
     struct RateDataModel {
         let rate: CurrencyRate
+        let balance: Decimal
+        let exchangeEnabled: Bool
     }
 
     struct RateViewModel {
         let title: String
+        let balance: String
+        let buttonEnabled: Bool
     }
 }

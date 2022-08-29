@@ -33,7 +33,18 @@ final class ExchangePresenter {
                            model.rate.sellCurrency.code,
                            formatter.string(from: model.rate.rate as NSNumber) ?? "",
                            model.rate.buyCurrency.code)
-        let viewModel = ExchangeModels.RateViewModel(title: title)
+        let balance = String(format: "Current balance: %@ %@",
+                             formatter.string(from: model.balance as NSNumber) ?? "",
+                             model.rate.sellCurrency.code)
+        let viewModel = ExchangeModels.RateViewModel(title: title, balance: balance, buttonEnabled: model.exchangeEnabled)
         view.update(from: viewModel)
+    }
+
+    func clear() {
+        view.clear()
+    }
+
+    func showAlert(title: String, message: String, completion: SimpleAction? = nil) {
+        view.showAlert(title: title, message: message, completion: completion)
     }
 }

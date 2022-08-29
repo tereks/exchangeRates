@@ -18,7 +18,7 @@ final class CurrencyCVCell: UICollectionViewCell, CellReusable {
     private let container: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .white
+        view.backgroundColor = .cream
         view.clipsToBounds = true
         view.layer.cornerRadius = 16
         return view
@@ -27,7 +27,7 @@ final class CurrencyCVCell: UICollectionViewCell, CellReusable {
     private let titleLabel: UILabel = {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.textColor = .black
+        view.textColor = .summerRed
         view.font = UIFont.systemFont(ofSize: 24, weight: .semibold)
         view.textAlignment = .center
         return view

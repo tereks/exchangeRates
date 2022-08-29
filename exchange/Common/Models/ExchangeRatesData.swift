@@ -7,28 +7,25 @@
 
 import Foundation
 
-// Example
 //{
-//  "base": "USD",
-//  "date": "2022-08-24",
-//  "rates": {
-//    "EUR": 1.005535,
-//    "GBP": 0.847343,
-//    "USD": 1
-//  },
-//  "success": true,
-//  "timestamp": 1661312946
+//    "success": true,
+//    "base": "GBP",
+//    "date": "2022-08-29",
+//    "rates": {
+//        "EUR": 1.175664,
+//        "GBP": 1,
+//        "USD": 1.168981
+//    }
 //}
 
 public struct ExchangeRatesData: Decodable {
     let base: Currency
-    let date: Date
     let success: Bool
     let rates: [CurrencyRate]
 
     enum CodingKeys: String, CodingKey {
         case base
-        case timestamp
+        case date
         case rates
         case success
     }
@@ -37,9 +34,6 @@ public struct ExchangeRatesData: Decodable {
         let values = try decoder.container(keyedBy: CodingKeys.self)
 
         base = try values.decode(Currency.self, forKey: .base)
-        
-        let timeStamp: TimeInterval = try values.decode(TimeInterval.self, forKey: .timestamp)
-        date = Date(timeIntervalSince1970: timeStamp)
         success = try values.decode(Bool.self, forKey: .success)
 
         let ratesData = try values.decode(RatesData.self, forKey: .rates)

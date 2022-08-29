@@ -26,8 +26,12 @@ final class ExchangeInteractor {
         }
     }
     private var currencyRates: [CurrencyRate] = []
+    private lazy var currencyBalances: [Currency: Decimal] = dip.dataProvider.currencyBalances
 
     private var timerToken: ObservationToken?
+    private var maxValue: Decimal {
+        return currencyBalances[currentCurrencyRate.sellCurrency] ?? 0
+    }
 
     // MARK: - Life cycle
 
@@ -76,7 +80,13 @@ final class ExchangeInteractor {
             debugPrint("No rates found")
             return
         }
-        let dataModel = ExchangeModels.RateDataModel(rate: currencyRates[index])
+
+        let rate      = currencyRates[index]
+        let balance   = currencyBalances[rate.sellCurrency] ?? 0
+        let exchangeEnabled = balance > 0 && rate.sellCurrency != rate.buyCurrency
+        let dataModel = ExchangeModels.RateDataModel(rate: rate,
+                                                     balance: balance,
+                                                     exchangeEnabled: exchangeEnabled)
         dip.presenter.showData(with: dataModel)
     }
 
@@ -93,5 +103,46 @@ final class ExchangeInteractor {
                 debugPrint(error.localizedDescription)
             }
         }
+    }
+
+    func buttonSelected(_ amountString: String) {
+        let amount = Decimal(string: amountString) ?? 0
+        guard let sellBalance = currencyBalances[currentCurrencyRate.sellCurrency],
+              let buyBalance = currencyBalances[currentCurrencyRate.buyCurrency] else {
+            return
+        }
+        currencyBalances[currentCurrencyRate.sellCurrency] = sellBalance - amount
+        currencyBalances[currentCurrencyRate.buyCurrency]  = buyBalance + amount
+
+        onCurrentCurrencyPairChanged()
+        dip.presenter.clear()
+        dip.presenter.showAlert(title: "Обмен валюты", message: "Операция прошла успешно")
+    }
+
+    // UITextField Delegate
+
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        guard let text = textField.text as NSString? else {
+            return false
+        }
+
+        let textAfterUpdate = text.replacingCharacters(in: range, with: string)
+        guard fractionDigitsCount(in: textAfterUpdate) <= 2 else {
+            return false
+        }
+
+        let newValue = Decimal(string: textAfterUpdate) ?? 0
+        return newValue <= maxValue
+    }
+
+    private func fractionDigitsCount(in string: String) -> Int {
+        var commaIndex = string.firstIndex(of: ".")?.utf16Offset(in: string)
+        if commaIndex == nil {
+            commaIndex = string.firstIndex(of: ",")?.utf16Offset(in: string)
+        }
+        guard let commaIndex = commaIndex else {
+            return 0
+        }
+        return string.count - 1 - commaIndex
     }
 }

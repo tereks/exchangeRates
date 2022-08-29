@@ -35,11 +35,14 @@ final class ApplicationDependenceProvider {
 
         container.register(.shared) { () -> RateDataProvider in
             let dependencies = RateDataProvider.Dependencies(
-                networkFactory: resolve()
+                networkFactory: resolve(),
+                localStorage: resolve()
             )
             return RateDataProvider(dependencies: dependencies)
         }
 
         container.register(.shared) { TimerService() }
+
+        container.register(.shared) { AccountDataProvider() }
     }
 }

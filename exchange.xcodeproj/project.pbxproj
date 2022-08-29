@@ -36,6 +36,8 @@
 		6B2206B528B5ECCC00E437A9 /* ApplicationDependenciesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2206B428B5ECCC00E437A9 /* ApplicationDependenciesProvider.swift */; };
 		6B2206B828B5ED5B00E437A9 /* SettingsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2206B728B5ED5B00E437A9 /* SettingsProvider.swift */; };
 		6B2206BA28B5F42400E437A9 /* ExchangeGetParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2206B928B5F42400E437A9 /* ExchangeGetParameters.swift */; };
+		6BBEAFCC28BC6553007B3967 /* UIColor+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBEAFCB28BC6553007B3967 /* UIColor+Extra.swift */; };
+		6BBEAFCE28BC6686007B3967 /* AccountDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBEAFCD28BC6686007B3967 /* AccountDataProvider.swift */; };
 		6BC1617528B6254700FD6F0C /* CurrenciesChooseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC1617428B6254700FD6F0C /* CurrenciesChooseView.swift */; };
 		6BC1617828B625D500FD6F0C /* CurrencyCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC1617728B625D500FD6F0C /* CurrencyCVCell.swift */; };
 		6BC1617B28B6260600FD6F0C /* CellReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC1617A28B6260600FD6F0C /* CellReusable.swift */; };
@@ -107,6 +109,8 @@
 		6B2206B428B5ECCC00E437A9 /* ApplicationDependenciesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationDependenciesProvider.swift; sourceTree = "<group>"; };
 		6B2206B728B5ED5B00E437A9 /* SettingsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsProvider.swift; sourceTree = "<group>"; };
 		6B2206B928B5F42400E437A9 /* ExchangeGetParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeGetParameters.swift; sourceTree = "<group>"; };
+		6BBEAFCB28BC6553007B3967 /* UIColor+Extra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extra.swift"; sourceTree = "<group>"; };
+		6BBEAFCD28BC6686007B3967 /* AccountDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDataProvider.swift; sourceTree = "<group>"; };
 		6BC1617428B6254700FD6F0C /* CurrenciesChooseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesChooseView.swift; sourceTree = "<group>"; };
 		6BC1617728B625D500FD6F0C /* CurrencyCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyCVCell.swift; sourceTree = "<group>"; };
 		6BC1617A28B6260600FD6F0C /* CellReusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellReusable.swift; sourceTree = "<group>"; };
@@ -343,6 +347,7 @@
 			isa = PBXGroup;
 			children = (
 				6B2206B228B5EBE100E437A9 /* RatesDataProvider.swift */,
+				6BBEAFCD28BC6686007B3967 /* AccountDataProvider.swift */,
 			);
 			path = Providers;
 			sourceTree = "<group>";
@@ -384,6 +389,7 @@
 			isa = PBXGroup;
 			children = (
 				6BC1618828B635F400FD6F0C /* NumberFormatter+Extra.swift */,
+				6BBEAFCB28BC6553007B3967 /* UIColor+Extra.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -664,12 +670,14 @@
 				6B2206A828B5DED100E437A9 /* SessionManager.swift in Sources */,
 				6B22069D28B5DC5500E437A9 /* Currency.swift in Sources */,
 				6BC1618228B633F800FD6F0C /* ObservationToken.swift in Sources */,
+				6BBEAFCE28BC6686007B3967 /* AccountDataProvider.swift in Sources */,
 				6BC1617528B6254700FD6F0C /* CurrenciesChooseView.swift in Sources */,
 				6BC1618928B635F400FD6F0C /* NumberFormatter+Extra.swift in Sources */,
 				6B22069128B5DA7D00E437A9 /* AuthorizationToken.swift in Sources */,
 				6BC1617828B625D500FD6F0C /* CurrencyCVCell.swift in Sources */,
 				6BC1617E28B6295B00FD6F0C /* ExchangeModels.swift in Sources */,
 				6B22069A28B5DC1000E437A9 /* ExchangeAPI.swift in Sources */,
+				6BBEAFCC28BC6553007B3967 /* UIColor+Extra.swift in Sources */,
 				6BC1618428B6341D00FD6F0C /* Observable.swift in Sources */,
 				6B22068228B5D5D600E437A9 /* ExchangeVC.swift in Sources */,
 				6BC1617B28B6260600FD6F0C /* CellReusable.swift in Sources */,

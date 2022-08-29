@@ -11,12 +11,18 @@ final class RateDataProvider {
 
     struct Dependencies {
         let networkFactory: NetworkFactory
+        let localStorage: AccountDataProvider
     }
     private(set) var dip: Dependencies
 
     private lazy var api: ExchangeAPI = {
         return dip.networkFactory.exchangeAPI()
     }()
+
+    public var currencyBalances: [Currency: Decimal] {
+        get { dip.localStorage.currencyBalances }
+        set { dip.localStorage.currencyBalances = newValue }
+    }
 
     // MARK: - Life cycle
 
